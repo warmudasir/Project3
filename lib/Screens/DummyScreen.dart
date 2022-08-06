@@ -5,15 +5,6 @@ class Dummy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ElevatedButton(child: Text("Gpay"),onPressed: () async {
-        await LaunchApp.openApp(
-          androidPackageName: 'hirdyansh',
-          iosUrlScheme: 'saabu',
-          appStoreLink: 'jaaneh',
-          // openStore: false
-        );
-      },),
-    );
+    return Container();
   }
 }
