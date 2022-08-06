@@ -8,9 +8,9 @@ class Dummy extends StatelessWidget {
     return Container(
       child: ElevatedButton(child: Text("Gpay"),onPressed: () async {
         await LaunchApp.openApp(
-          androidPackageName: 'net.pulsesecure.pulsesecure',
-          iosUrlScheme: 'pulsesecure://',
-          appStoreLink: 'itms-apps://itunes.apple.com/us/app/pulse-secure/id945832041',
+          androidPackageName: 'hirdyansh',
+          iosUrlScheme: 'saabu',
+          appStoreLink: 'jaaneh',
           // openStore: false
         );
       },),
