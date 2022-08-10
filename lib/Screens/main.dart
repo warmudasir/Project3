@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import './DummyScreen.dart';
 import 'home.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 void main() {
   runApp(MyApp());
 }
@@ -39,13 +40,24 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-          child: Text("Fast travel",style: TextStyle(
-            color: Colors.white,decoration: TextDecoration.none
-          ),),
-
-      ),
+    return Container(
+        color: Colors.white,
+        child: Center(
+            child: AnimatedTextKit(
+              animatedTexts: [
+                TypewriterAnimatedText(
+                  'Fast Travel',
+                  textStyle: const TextStyle(
+                    color: Colors.black,
+                    decoration: TextDecoration.none,
+                    fontSize: 32.0,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  speed: const Duration(milliseconds: 200),
+                ),
+              ],
+            )
+        )
     );
   }
 }
