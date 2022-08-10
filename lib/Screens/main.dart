@@ -39,9 +39,13 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   @override
   Widget build(BuildContext context) {
-    return Container(
-        color: Colors.white,
-        child:FlutterLogo(size:MediaQuery.of(context).size.height)
+    return Center(
+      child: Container(
+          child: Text("Fast travel",style: TextStyle(
+            color: Colors.white,decoration: TextDecoration.none
+          ),),
+
+      ),
     );
   }
 }
