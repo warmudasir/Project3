@@ -2,9 +2,21 @@ import 'package:fasttravel/widgets/NavBar.dart';
 import 'package:flutter/material.dart';
 import '../widgets/Recommendation.dart';
 import './PaymentandCOnfirmationScreen.dart';
-class transaction extends StatelessWidget {
+import '../Screens/FIrstScreen.dart';
+class transaction extends StatefulWidget {
   const transaction({Key? key}) : super(key: key);
 
+  @override
+  State<transaction> createState() => _transactionState();
+}
+
+class _transactionState extends State<transaction> {
+  final tabs=[
+    FirstScreen(),
+    // Center(child: Text("Helloi"),),
+    Center(child: Text("Under Development"),),
+    Center(child: Text("Under Development"),)
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,18 +45,21 @@ class transaction extends StatelessWidget {
                       height: 250,
                       width: 200,
                       decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(20)),
+                      child:Text("Ola",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w900,fontSize:25),),padding: EdgeInsets.all(10),
                     ),
                     Container(
                       margin: EdgeInsets.all(10),
                       height: 250,
                       width: 200,
                       decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(20)),
+                      child:Text("Uber",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w900,fontSize:25),),padding: EdgeInsets.all(10),
                     ),
                     Container(
                       margin: EdgeInsets.all(10),
                       height: 250,
                       width: 200,
                       decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(20)),
+                      child:Text("Rapido",style:TextStyle(color: Colors.white,fontWeight: FontWeight.w900,fontSize:25),),padding: EdgeInsets.all(10),
                     ),
 
                   ],
@@ -55,7 +70,7 @@ class transaction extends StatelessWidget {
           ]),
         ),
       ),
-      bottomNavigationBar: Navbar(),
+      bottomNavigationBar: Navbar()
 
     );
   }
